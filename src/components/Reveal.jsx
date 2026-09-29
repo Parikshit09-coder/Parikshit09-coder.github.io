@@ -15,7 +15,7 @@ export function Reveal({ children, delay = 0, y = 40, className = '', as = 'div'
   )
 }
 
-// Slides each word up from behind a mask — the editorial headline effect.
+// Slides each word up from behind a mask: the editorial headline effect.
 export function MaskText({ text, className = '', delay = 0, stagger = 0.06, animateNow = false }) {
   const words = text.split(' ')
   const trigger = animateNow

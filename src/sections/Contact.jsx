@@ -20,7 +20,7 @@ const COMMANDS = {
     '  goto <s>   jump to a section',
     '  clear      clear the screen',
   ],
-  whoami: () => [`${profile.firstName} ${profile.lastName} — ${profile.roles.slice(0, 2).join(' · ')}`],
+  whoami: () => [`${profile.firstName} ${profile.lastName} · ${profile.roles.slice(0, 2).join(' · ')}`],
   email: () => (location.href = `mailto:${profile.email}`, [`opening mail client → ${profile.email}`]),
   github: () => (open(profile.links.github), ['opening github…']),
   linkedin: () => (open(profile.links.linkedin), ['opening linkedin…']),

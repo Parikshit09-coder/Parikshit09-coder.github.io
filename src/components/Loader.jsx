@@ -72,7 +72,7 @@ export default function Loader({ tasks, onDone }) {
       push('[ai]    initialising neural vibes ........ done', 'info')
       await beat(240)
       setProgress(1)
-      push(`✔ hydrated in ${((performance.now() - t0) / 1000).toFixed(2)}s — welcome.`, 'ok')
+      push(`✔ hydrated in ${((performance.now() - t0) / 1000).toFixed(2)}s, welcome.`, 'ok')
       sessionStorage.setItem('booted', '1')
       setReady(true)
       await beat(650)
@@ -100,7 +100,7 @@ export default function Loader({ tasks, onDone }) {
         <span className="size-2.5 rounded-full bg-[#ff5f57]" />
         <span className="size-2.5 rounded-full bg-[#febc2e]" />
         <span className="size-2.5 rounded-full bg-[#28c840]" />
-        <span className="ml-3">~/portfolio — zsh</span>
+        <span className="ml-3">~/portfolio · zsh</span>
       </div>
 
       <div className="flex-1 overflow-hidden px-(--gx) py-6 sm:py-10">

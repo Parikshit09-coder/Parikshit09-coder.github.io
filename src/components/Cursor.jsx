@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion, useMotionValue, useSpring } from 'motion/react'
 
-// Motion values update the transform directly — no React re-render per mousemove.
+// Motion values update the transform directly, so no React re-render per mousemove.
 export default function Cursor() {
   const x = useMotionValue(-100)
   const y = useMotionValue(-100)

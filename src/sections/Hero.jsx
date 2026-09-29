@@ -11,7 +11,7 @@ import CodeWindow from '../components/CodeWindow'
 import Portrait from '../components/Portrait'
 import TypeCycle from '../components/TypeCycle'
 
-// three.js is ~150kB gz — split out and only fetched for capable screens
+// three.js is ~150kB gz, so it is split out and only fetched for capable screens
 const NeuralField = lazy(() => import('../components/NeuralField'))
 
 const DEV_CODE = [
@@ -28,7 +28,7 @@ const PY_CODE = [
   [['k', 'if '], ['p', 'pod.status == '], ['s', '"OOMKilled"'], ['p', ':']],
   [['p', '    fix = agent.'], ['f', 'diagnose'], ['p', '(pod)']],
   [['p', '    argocd.'], ['f', 'sync'], ['p', '(fix)']],
-  [['c', '# ✓ healed — no human paged']],
+  [['c', '# ✓ healed, no human paged']],
 ]
 
 const GIT_CODE = [
@@ -80,7 +80,7 @@ export default function Hero({ booted }) {
       onMouseMove={desktop ? onMove : undefined}
       className="relative flex min-h-[100svh] w-full overflow-hidden"
     >
-      {/* 3D neural net — full-bleed but faint */}
+      {/* 3D neural net: full-bleed but faint */}
       {desktop && !reduced && (
         <div className="pointer-events-none absolute inset-0 opacity-40 [mask-image:linear-gradient(to_right,transparent_5%,black_55%)]">
           <Suspense fallback={null}>
@@ -89,7 +89,7 @@ export default function Hero({ booted }) {
         </div>
       )}
 
-      {/* ── right: portrait — full, uncropped cut-out sized to the photo’s own aspect ratio, kept clear of the nav rail ── */}
+      {/* right: portrait. Full, uncropped cut-out sized to the photo’s own aspect ratio, kept clear of the nav rail */}
       <motion.div
         style={desktop ? { x: photoX } : undefined}
         initial={{ clipPath: 'inset(100% 0 0 0)' }}
@@ -123,7 +123,7 @@ export default function Hero({ booted }) {
         </>
       )}
 
-      {/* ── left: headline ── */}
+      {/* left: headline */}
       <div className="relative z-10 flex w-full flex-col justify-end px-(--gx) pb-16 pt-[48svh] sm:pb-20 lg:w-[58%] lg:justify-center lg:pb-10 lg:pt-28">
         <motion.p
           initial={{ opacity: 0 }}

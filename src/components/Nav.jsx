@@ -47,7 +47,7 @@ export default function Nav({ sections, active }) {
         </button>
       </header>
 
-      {/* right rail — mirrors the editorial template */}
+      {/* right rail: mirrors the editorial template */}
       <nav
         aria-label="Sections"
         className="fixed right-(--gx) top-1/2 z-50 hidden -translate-y-1/2 flex-col items-end gap-5 font-serif text-[16px] lg:flex"
